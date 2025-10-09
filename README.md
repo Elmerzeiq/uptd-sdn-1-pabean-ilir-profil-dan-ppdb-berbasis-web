@@ -7,15 +7,15 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-![alt text](https://github.com/Dellafaiza/uptd-sdn-1-pabean-ilir-profil-dan-ppdb-berbasis-web/blob/main/public/img/1.jpg?raw=true)
+![alt text](https://github.com/Dellafaiza/uptd-sdn-1-pabean-ilir-profil-dan-ppdb-berbasis-web/blob/main/public/img/1.png?raw=true)
 
-![alt text](https://github.com/Dellafaiza/uptd-sdn-1-pabean-ilir-profil-dan-ppdb-berbasis-web/blob/main/public/img/2.jpg?raw=true)
+![alt text](https://github.com/Dellafaiza/uptd-sdn-1-pabean-ilir-profil-dan-ppdb-berbasis-web/blob/main/public/img/2.png?raw=true)
 
-![alt text](http://github.com/Dellafaiza/uptd-sdn-1-pabean-ilir-profil-dan-ppdb-berbasis-web/blob/main/public/img/3.jpg?raw=true)
+![alt text](https://github.com/Dellafaiza/uptd-sdn-1-pabean-ilir-profil-dan-ppdb-berbasis-web/blob/main/public/img/3.png?raw=true)
 
-![alt text](https://github.com/Dellafaiza/uptd-sdn-1-pabean-ilir-profil-dan-ppdb-berbasis-web/blob/main/public/img/4.jpg?raw=true)
+![alt text](https://github.com/Dellafaiza/uptd-sdn-1-pabean-ilir-profil-dan-ppdb-berbasis-web/blob/main/public/img/4.png?raw=true)
 
-![alt text](https://github.com/Dellafaiza/uptd-sdn-1-pabean-ilir-profil-dan-ppdb-berbasis-web/blob/main/public/img/5.jpg?raw=true)
+![alt text](https://github.com/Dellafaiza/uptd-sdn-1-pabean-ilir-profil-dan-ppdb-berbasis-web/blob/main/public/img/5.png?raw=true)
 
 
 # 🏫 Website UPTD SDN 1 Pabean Ilir
