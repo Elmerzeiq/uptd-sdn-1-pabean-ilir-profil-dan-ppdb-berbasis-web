@@ -135,14 +135,6 @@ Kontribusi selalu diterima! Silakan buat pull request atau laporkan issue jika m
 
 Untuk berkontribusi pada Laravel framework, silakan lihat [panduan kontribusi Laravel](https://laravel.com/docs/contributions).
 
-## 📄 Lisensi
-
-Proyek ini dilisensikan di bawah [MIT license](https://opensource.org/licenses/MIT).
-
-## 🔒 Keamanan
-
-Jika Anda menemukan kerentanan keamanan dalam aplikasi ini, silakan hubungi kami melalui email yang tertera di bawah. Semua kerentanan keamanan akan segera ditangani.
-
 ---
 
 Dikembangkan dengan ❤️ untuk pendidikan yang lebih baik
