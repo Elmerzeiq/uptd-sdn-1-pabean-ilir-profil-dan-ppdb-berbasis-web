@@ -13,14 +13,24 @@ return new class extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->id();
+
+            // Informasi dasar
             $table->string('name');
-            $table->string('username')->nullable();
-            $table->string('nama_lengkap')->nullable(); // Admin wajib nama lengkap
-            $table->string('email')->unique()->nullable(); // Admin wajib email
+            $table->string('username')->unique(); // lebih baik unik, agar login aman
+            $table->string('nama_lengkap')->nullable();
+
+            // Email wajib unik
+            $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
+
+            // Autentikasi
             $table->string('password');
-            $table->enum('role', ['admin','siswa','user'])->default('siswa');
+
+            // Role dan status
+            $table->enum('role', ['admin', 'siswa', 'user'])->default('siswa');
             $table->enum('status', ['active', 'inactive'])->default('active');
+
+            // Token & timestamp
             $table->rememberToken();
             $table->timestamps();
         });
@@ -46,8 +56,8 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('users');
-        Schema::dropIfExists('password_reset_tokens');
         Schema::dropIfExists('sessions');
+        Schema::dropIfExists('password_reset_tokens');
+        Schema::dropIfExists('users');
     }
 };

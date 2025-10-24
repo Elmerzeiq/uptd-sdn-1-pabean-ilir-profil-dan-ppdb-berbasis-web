@@ -2,46 +2,49 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Hash;
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use App\Models\User;
+use Illuminate\Support\Facades\Hash;
+
 class UsersTableSeeder extends Seeder
 {
     /**
-     * Run the database seeds.
+     * Jalankan seeder database.
      */
     public function run(): void
     {
-        DB::table('users')->insert([
-
-            //admin
+        $users = [
             [
                 'name' => 'Admin',
                 'username' => 'admin',
                 'email' => 'admin@gmail.com',
                 'password' => Hash::make('12345678'),
                 'role' => 'admin',
-                'status' => 'active'
+                'status' => 'active',
             ],
-            //siswa
             [
                 'name' => 'Siswa',
                 'username' => 'siswa',
                 'email' => 'siswa@gmail.com',
                 'password' => Hash::make('12345678'),
                 'role' => 'siswa',
-                'status' => 'active'
+                'status' => 'active',
             ],
-            //user
             [
                 'name' => 'User',
                 'username' => 'user',
                 'email' => 'user@gmail.com',
                 'password' => Hash::make('12345678'),
                 'role' => 'user',
-                'status' => 'active'
-            ]
-        ]);
+                'status' => 'active',
+            ],
+        ];
+
+        foreach ($users as $data) {
+            User::updateOrCreate(
+                ['email' => $data['email']], // cek email unik
+                $data // update atau insert data baru
+            );
+        }
     }
 }

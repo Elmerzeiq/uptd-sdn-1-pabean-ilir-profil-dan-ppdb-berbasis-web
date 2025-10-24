@@ -2,7 +2,6 @@
 
 namespace App\Models;
 
-// use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
@@ -12,16 +11,19 @@ class User extends Authenticatable
     use HasFactory, Notifiable;
 
     /**
-     * The attributes that are mass assignable.
-     *
-     * @var array<int, string>
+     * Kolom yang boleh diisi secara mass-assignment.
      */
-    protected $guarded = [];
+    protected $fillable = [
+        'name',
+        'username',
+        'email',
+        'password',
+        'role',
+        'status',
+    ];
 
     /**
-     * The attributes that should be hidden for serialization.
-     *
-     * @var array<int, string>
+     * Kolom yang disembunyikan ketika model di-serialize.
      */
     protected $hidden = [
         'password',
@@ -29,9 +31,7 @@ class User extends Authenticatable
     ];
 
     /**
-     * Get the attributes that should be cast.
-     *
-     * @return array<string, string>
+     * Tipe data yang perlu di-casting otomatis.
      */
     protected function casts(): array
     {
@@ -41,11 +41,13 @@ class User extends Authenticatable
         ];
     }
 
-    static public function getRecord()
+    /**
+     * Fungsi untuk mengambil semua data user dengan pagination.
+     */
+    public static function getRecord()
     {
-        $return = self::select('users.*')
-            ->orderBy('id', 'asc');
-        $return = $return->paginate(10);
-        return $return;
+        return self::select('users.*')
+            ->orderBy('id', 'asc')
+            ->paginate(10);
     }
 }
